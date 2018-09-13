@@ -1,0 +1,46 @@
+{
+  "name": "ariaset",
+  "version": "0.1.0",
+  "main": "./dist/ariaset.js",
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "NODE_ENV=development npm run webpack:dev",
+    "test": "jest",
+    "build": "NODE_ENV=production npm run webpack:pro",
+    "prepublish": "npm run build",
+    "webpack:dev": "webpack -w",
+    "webpack:pro": "webpack --display-used-exports",
+    "eslint": "eslint --fix --ext .js ./ariaset.js ./tests"
+  },
+  "author": "kzhrk",
+  "devDependencies": {
+    "@babel/core": "^7.0.1",
+    "@babel/plugin-syntax-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.5.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-jest": "^21.22.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "jest": "^23.6.0",
+    "prettier": "^1.14.2",
+    "regenerator-runtime": "^0.12.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1"
+  },
+  "jest": {
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  }
+}

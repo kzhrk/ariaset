@@ -8,3 +8,5 @@ public
 tmp
 
 npm-debug*
+coverage/
+dist/
