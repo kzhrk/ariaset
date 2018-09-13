@@ -1,0 +1,10 @@
+node_modules
+.DS_Store
+Thumbs.db
+.idea
+config.js
+package-lock.json
+public
+tmp
+
+npm-debug*
