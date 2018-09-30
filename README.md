@@ -1,5 +1,7 @@
 ariaset
 ===
+[![Build Status](https://travis-ci.org/kzhrk/ariaset.svg?branch=master)](https://travis-ci.org/kzhrk/ariaset)
+[![Coverage Status](https://coveralls.io/repos/github/kzhrk/ariaset/badge.svg?branch=master)](https://coveralls.io/github/kzhrk/ariaset?branch=master)
 
 ariaset make easier assign for aria-" properties.
 
