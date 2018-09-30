@@ -1,21 +1,11 @@
 {
   "name": "ariaset",
+  "description": "JavaScript library for WAI-ARIA",
   "version": "0.1.0",
-  "main": "./dist/ariaset.js",
-  "files": [
-    "dist",
-    "LICENSE"
-  ],
-  "scripts": {
-    "start": "NODE_ENV=development npm run webpack:dev",
-    "test": "jest",
-    "build": "NODE_ENV=production npm run webpack:pro",
-    "prepublish": "npm run build",
-    "webpack:dev": "webpack -w",
-    "webpack:pro": "webpack --display-used-exports",
-    "eslint": "eslint --fix --ext .js ./ariaset.js ./tests"
-  },
   "author": "kzhrk",
+  "bugs": {
+    "url": "https://github.com/kzhrk/ariaset/issues"
+  },
   "devDependencies": {
     "@babel/core": "^7.0.1",
     "@babel/plugin-syntax-object-rest-spread": "^7.0.0",
@@ -35,6 +25,11 @@
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1"
   },
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "homepage": "https://github.com/kzhrk/ariaset.git",
   "jest": {
     "moduleDirectories": [
       "node_modules"
@@ -42,5 +37,25 @@
     "transform": {
       "^.+\\.js$": "babel-jest"
     }
+  },
+  "keywords": [
+    "WAI-ARIA",
+    "accessibility",
+    "aria"
+  ],
+  "license": "MIT",
+  "main": "./dist/ariaset.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kzhrk/ariaset.git"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production npm run webpack:pro",
+    "eslint": "eslint --fix --ext .js ./src ./tests",
+    "prepublish": "npm run build",
+    "start": "NODE_ENV=development npm run webpack:dev",
+    "test": "jest",
+    "webpack:dev": "webpack -w",
+    "webpack:pro": "webpack --display-used-exports"
   }
 }
