@@ -2,6 +2,20 @@ const config = require('./config');
 const util = require('./util');
 const validation = require('./validation/index');
 
+function generateValue(val) {
+  if (val === 'true') {
+    val = true;
+  } else if (val === 'false') {
+    val = false;
+  } else if (val === 'undefined') {
+    val = undefined;
+  } else if (util.isNumber(val)) {
+    val = parseInt(val, 10);
+  }
+
+  return val;
+}
+
 function ariaset(element, params) {
   let names = null;
   let values = null;
@@ -29,23 +43,18 @@ function ariaset(element, params) {
 
   // get
   if (values === null) {
-    let ret = names.map(name => {
-      let val = element.getAttribute(`aria-${name}`);
+    let ret;
 
-      if (val === 'true') {
-        val = true;
-      } else if (val === 'false') {
-        val = false;
-      } else if (val === 'undefined') {
-        val = undefined;
-      } else if (util.isNumber(val)) {
-        val = parseInt(val, 10);
-      }
+    if (names.length === 1) {
+      ret = generateValue(element.getAttribute(`aria-${names[0]}`));
+    } else {
+      ret = {};
+      names.forEach(name => {
+        ret[name] = generateValue(element.getAttribute(`aria-${name}`));
+      });
+    }
 
-      return val;
-    });
-
-    return ret.length === 1 ? ret[0] : ret;
+    return ret;
 
     // set
   } else {

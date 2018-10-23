@@ -5,19 +5,48 @@ ariaset
 
 ariaset make easier assign for aria-" properties.
 
+## Install
+
+```
+$ yarn add ariaset -D
+```
+
+or
+
+```
+$ npm install ariaset -D
+```
+
 ## Usage
+
+The recommend use case is using `import` statements.  
 
 ```js
 import ariaset from 'ariaset';
 
 const element = document.querySelector('.selector');
 
-ariaset(element {
+// set a property
+ariaset(element, {
   label: 'description'
 });
+
+// get a property
+ariaset(element, 'label');
+// => description
+
+// you can set multiple properties.
+ariaset(element, {
+  haspopup: 'listbox',
+  expanded: false
+});
+
+// of course, you can get multiple properties.
+ariaset(element, ['haspopup', 'expanded']);
+// => { haspopup: 'listbox', expanded: false }
 ```
 
-or 
+Alternatively, you can use `script` tag with html file.
 
 ```html
 <script src="node_modules/ariaset/dist/ariaset.js">
@@ -28,12 +57,6 @@ ariaset(element {
   label: 'description'
 });
 </script>
-```
-
-## Install
-
-```
-$ npm install ariaset
 ```
 
 ## Licence

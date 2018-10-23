@@ -19,6 +19,9 @@ describe(`get/set multiple properties`, () => {
     });
     expect(ariaset(testNode, 'checked')).toEqual(true);
     expect(ariaset(testNode, 'label')).toEqual('string');
-    expect(ariaset(testNode, ['checked', 'label'])).toEqual([true, 'string']);
+    expect(ariaset(testNode, ['checked', 'label'])).toEqual({
+      checked: true,
+      label: 'string'
+    });
   });
 });
