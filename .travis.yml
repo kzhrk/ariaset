@@ -4,4 +4,6 @@ node_js:
 dist: trusty
 sudo: false
 cache: yarn
+branches:
+  except: /^feature.*$/
 script: yarn run build && yarn run test --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js

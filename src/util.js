@@ -9,6 +9,6 @@ export const isId = val => {
   );
 };
 
-export const isNumber = val => {
+export const isNumberOfString = val => {
   return /^-?[0-9]+$/.test(val);
 };

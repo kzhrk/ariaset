@@ -1,9 +1,10 @@
-ariaset
-===
+# ariaset
+
 [![Build Status](https://travis-ci.org/kzhrk/ariaset.svg?branch=master)](https://travis-ci.org/kzhrk/ariaset)
 [![Coverage Status](https://coveralls.io/repos/github/kzhrk/ariaset/badge.svg?branch=master)](https://coveralls.io/github/kzhrk/ariaset?branch=master)
+[![npm version](https://badge.fury.io/js/ariaset.svg)](https://badge.fury.io/js/ariaset)
 
-ariaset make easier assign for aria-" properties.
+An ariaset makes easier assign for aria-" properties.
 
 ## Install
 

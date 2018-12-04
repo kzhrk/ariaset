@@ -52,5 +52,13 @@ export const arias = [
 export const messages = {
   valueIsBoolean: 'value must be boolean',
   invalidValue: 'invalid values',
-  invalidArguments: 'error'
+  invalidArguments: 'error',
+  invalidRole: arianame => {
+    return `The element set a aria-${arianame} has invalid role.`;
+  }
+};
+
+export const throwType = {
+  error: 'error',
+  warn: 'warn'
 };

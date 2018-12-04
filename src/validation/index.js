@@ -48,9 +48,9 @@ const valuenow = require('./valuenow');
 const valuetext = require('./valuetext');
 
 const createValidation = handlers => {
-  return function validation(type, value) {
+  return function validation(type, value, element) {
     if (handlers.hasOwnProperty(type)) {
-      return handlers[type](value);
+      return handlers[type](value, element);
     } else {
       return new Error();
     }

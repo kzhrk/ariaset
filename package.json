@@ -51,7 +51,7 @@
   },
   "scripts": {
     "build": "NODE_ENV=production npm run webpack:pro",
-    "eslint": "eslint --fix --ext .js ./src ./tests",
+    "lint": "eslint --fix --ext .js ./src ./tests",
     "prepublish": "npm run build",
     "start": "NODE_ENV=development npm run webpack:dev",
     "test": "jest",

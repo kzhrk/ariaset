@@ -3,6 +3,9 @@ const util = require('../util');
 
 module.exports = value => {
   if (!util.isId(value)) {
-    throw new Error(config.messages.invalidValue);
+    throw {
+      type: config.throwType.error,
+      message: config.messages.invalidValue
+    };
   }
 };

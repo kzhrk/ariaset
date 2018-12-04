@@ -9,10 +9,16 @@ module.exports = value => {
       .split(' ')
       .forEach(val => {
         if (!util.isId(val)) {
-          throw new Error(config.messages.invalidValue);
+          throw {
+            type: config.throwType.error,
+            message: config.messages.invalidValue
+          };
         }
       });
   } else {
-    throw new Error(config.messages.invalidValue);
+    throw {
+      type: config.throwType.error,
+      message: config.messages.invalidValue
+    };
   }
 };
