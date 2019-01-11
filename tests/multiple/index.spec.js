@@ -1,5 +1,5 @@
-const ariaset = require('../../src');
-const config = require('../../src/config');
+import ariaset from '../../src';
+import * as config from '../../src/config';
 
 describe(`get/set multiple properties`, () => {
   const testNode = document.createElement('div');

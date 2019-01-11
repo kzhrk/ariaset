@@ -1,5 +1,5 @@
-const ariaset = require('../../src');
-const config = require('../../src/config');
+import ariaset from '../../src';
+import * as config from '../../src/config';
 
 module.exports = ({
   arianame,
